@@ -17,7 +17,7 @@ const Hero = () => {
                 <div className="">
                   <div className="font-semibold">Unlocking the Future of Investment</div>
                   <div className="">
-                      At Innovest, we&apos;re pioneering a new era of venture capital. We are a community-driven Decentralized Autonomous Organization, 
+                      At Innovest, we are pioneering a new era of venture capital. We are a community-driven Decentralized Autonomous Organization, 
                       powered by blockchain technology, where innovation knows no bounds.
                   </div>
                 </div>

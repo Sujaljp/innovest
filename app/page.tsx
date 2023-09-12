@@ -22,7 +22,7 @@ export default function Home() {
                 <AccordionItem value="item-1 ">
                   <AccordionTrigger className='text-xl'>🌐 Global Impact</AccordionTrigger>
                   <AccordionContent className='text-lg'>
-                    We&apos;re on a mission to fund and support the most promising startups and entrepreneurs worldwide, transcending geographical boundaries.
+                    We are on a mission to fund and support the most promising startups and entrepreneurs worldwide, transcending geographical boundaries.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
