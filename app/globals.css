@@ -47,6 +47,18 @@
     --input: 12 6.5% 15.1%;
     --ring: 20.5 90.2% 48.2%;
   }
+
+  body::-webkit-scrollbar{
+    width: .25rem;
+  }
+
+  body::-webkit-scrollbar-track{
+      background: rgba(255, 255, 255, 0);
+  }
+
+  body::-webkit-scrollbar-thumb{
+      background: #c0560f;
+  }
 }
  
 @layer base {

@@ -17,7 +17,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"/>
         </head>
         <body>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             {children}
           </ThemeProvider>
         </body>

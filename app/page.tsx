@@ -1,58 +1,62 @@
 import Header  from '@/components/Header'
 import Hero from './hero'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import Accord from './accord'
+import Featured from './featured'
+import { Button } from '@/components/ui/button'
+
 
 export default function Home() {
   return (
     <div>
-          <div>
-            <video className='absolute z-0 w-full h-3/4 object-cover' src='/back.mp4' loop autoPlay muted></video>
-          </div>
-        <div className='relative '>
-          <Header/>
+
+      {/* Video background */}
+      <div className='absolute h-screen'>
+            <video className='w-screen h-2/3 object-cover' src='/back.mp4' loop autoPlay muted></video>
+      </div>
+      {/* Landing page starts */}
+      <div className='relative px-16'>
+        
+        <div className="hero h-screen">
+          <Header />
           <Hero/>
-            <div className="space-y-4 p-16 pt-6">
-            <div className="text-3xl font-bold tracking-tight">🚀 Join the Revolution 🚀</div>
-              <Accordion type="single" collapsible className="w-full ">
-                <AccordionItem value="item-1 ">
-                  <AccordionTrigger className='text-xl'>🌐 Global Impact</AccordionTrigger>
-                  <AccordionContent className='text-lg'>
-                    We are on a mission to fund and support the most promising startups and entrepreneurs worldwide, transcending geographical boundaries.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-2">
-                  <AccordionTrigger className='text-xl'>🤝 Community Collaboration</AccordionTrigger>
-                  <AccordionContent className='text-lg'>
-                    Your voice matters. As a member, you actively participate in investment decisions, shaping the future of technology and innovation.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-3">
-                  <AccordionTrigger className='text-xl'>💡 Innovation Catalyst</AccordionTrigger>
-                  <AccordionContent className='text-lg'>
-                    We provide startups with more than just capital. We offer mentorship, resources, and a network of experts to fuel their growth.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-4">
-                  <AccordionTrigger className='text-xl'>🔒 Security and Transparency</AccordionTrigger>
-                  <AccordionContent className='text-lg'>
-                    Our blockchain-based platform ensures trust, transparency, and security in all transactions.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-5">
-                  <AccordionTrigger className='text-xl'>💰 Invest with Confidence</AccordionTrigger>
-                  <AccordionContent className='text-lg'>
-                  Diversify your portfolio by backing innovative projects handpicked by our community of experts.
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
-            
         </div>
+        <div className="featured px-10">
+          <Featured/>
+          
+        </div>
+
+        <div className="py-32 flex gap-8 flex-col justify-center items-center text-center">
+          <div className="text-5xl font-bold tracking-tight ">Governed by the Community</div>
+          <div className="w-1/3 text-muted-foreground">Innovest is a fully Decentralized community driven DAO with over 1000000 tokens locked in it.</div>
+          <Button className='bg-secondary'> Governance</Button>
+        </div>
+        <div className="px-10 mt-10 mb-20">
+          <div className="text-4xl font-bold tracking-tight my-12">Join the Revolution</div>
+          <div className="grid gap-4 grid-cols-1 mx-10">
+            <Accord/>
+          </div>
+        </div>  
+      </div>
+      <div className="p-16 bg-secondary">
+        <div className="px-10 h-full w-full grid grid-cols-4 text-lg">
+          <ul className='flex gap-6 col-span-2 text-2xl'>
+            <li><i className="uil uil-github"></i></li>
+            <li><i className="uil uil-twitter"></i></li>
+            <li><i className="uil uil-discord"></i></li>
+          </ul>
+          <ul className='flex flex-col gap-4'>
+            <li>Invest</li>
+            <li>Venture</li>
+            <li>Submit Idea</li>
+            <li>Treasury</li>
+          </ul>
+          <ul className='flex flex-col gap-4'>
+            <li>Smart contract</li>
+            <li>Contribute</li>
+            <li>Bug report</li>
+          </ul>
+        </div>
+      </div>
 
     </div>
   )

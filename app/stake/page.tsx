@@ -1,3 +1,5 @@
+'use client'
+
 import Header  from '@/components/Header'
 import {
   Accordion,
@@ -5,19 +7,49 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { Button } from '@/components/ui/button'
+import buildings from "../../public/buildings.jpg"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Stake from './Stake'
+import Unstake from './Unstake'
+import CalenderRange from './CalenderRange'
+
+
+
 
 export default function Home() {
+
   return (
     <div>
-        <div className=''>
-          <video className='absolute z-0 w-full h-full object-cover blur-lg' src='/back.mp4' loop autoPlay muted></video>
-        </div>
-        <div className='relative'>
-          <Header/>
-            
-            
-        </div>
+      {/* <div className="absolute blur-sm h-screen w-screen bg-cover bg-[url('../public/buildings.jpg')]"></div> */}
+      <div className="relative px-16 h-screen bg-gradient-to-tl from-secondary to-black" >
+        <Header />
+          <div className=" ">
+            <Tabs defaultValue="stake" className="w-full h-full px-10">
+              <div className="stake-head flex justify-between items-center ">
+                <TabsList className=''>
+                  <TabsTrigger  value="stake">Stake</TabsTrigger>
+                  <TabsTrigger  value="unstake">Un-Stake</TabsTrigger>
+                </TabsList>
+                <CalenderRange/>
+              </div>
+              <TabsContent value="stake">
+                <Stake/>
+              </TabsContent>
+              <TabsContent value="unstake">
+                <Unstake/>
+              </TabsContent>
+            </Tabs>
 
+          
+          {/* <Button onClick={deposit}>
+            Invest
+          </Button>  */}
+          {/* <Button onClick={withdraw}>
+            Withdraw
+          </Button>  */}
+          </div>
+    </div>
     </div>
   )
 }
