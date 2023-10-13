@@ -11,7 +11,7 @@ import abi from "../../lib/Stake.json"
 
 const Stake = () => {
 
-    const contractAddress = "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512"
+    const contractAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"
     const contractABI = abi.abi
     
     const [amount,setAmount] = useState(360)

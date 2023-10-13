@@ -37,7 +37,7 @@ export default function Home() {
               
           </div>
           <div className=' h-fit p-10 bg-gradient-to-tl from-secondary to-black rounded-lg  hover:from-10%'>
-              <div className="text-3xl flex justify-between font-bold tracking-tight my-6">Project listing application form</div>
+              <div className="text-3xl flex justify-between font-bold tracking-tight my-6">Project Details</div>
                     <h3 className='text-2xl font-semibold my-auto pb-4'>Earnings</h3>
                     <div className="flex justify-between items-center mt-6 text-gray-500 text-sm">
                         <p className=''>Amount ready to unstake</p>
@@ -81,12 +81,10 @@ export default function Home() {
                         <p className='flex justify-between'>Invest
                         </p>
                     </div>
-                    <Button className='mt-4 w-full font-bold'>Vote</Button>
           </div>
-            
         </div>
         <div className=' h-fit p-10 '>
-              <div className="text-3xl flex justify-between font-bold tracking-tight my-6">Project listing application form</div>
+              <div className="text-3xl flex justify-between font-bold tracking-tight my-6">Validator Thought</div>
                     <h3 className='text-2xl font-semibold my-auto pb-4'>Earnings</h3>
                     <div className="flex justify-between items-center mt-6 text-gray-500 text-sm">
                         <p className=''>Amount ready to unstake</p>
@@ -131,7 +129,7 @@ export default function Home() {
                         </p>
                     </div>
                     <Button className='mt-4 font-bold'>Submit</Button>
-          </div>
+        </div>
 
     </div>
     </div>
