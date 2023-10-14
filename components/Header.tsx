@@ -62,7 +62,7 @@ const Header = ({  className,...props}: React.HTMLAttributes<HTMLElement>) => {
             Participate
           </Link>
           <Link
-            href=""
+            href="/treasury"
             className="font-medium text-foreground transition-colors hover:text-primary"
           >
             Treasury
