@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   description: "Example dashboard app built using the components.",
 }
 
-export default function DashboardPage() {
+export default function Portfolio() {
   return (
     <>
       <div className="md:hidden">
@@ -60,28 +60,7 @@ export default function DashboardPage() {
           </div>
         </div> */}
         <div className="flex-1 space-y-4 p-8 pt-6">
-          <div className="flex items-center justify-between space-y-2">
-            <h2 className="text-3xl font-bold tracking-tight">Treasury</h2>
-            <div className="flex items-center space-x-2">
-              <CalendarDateRangePicker />
-              <Button>Download</Button>
-            </div>
-          </div>
-          <Tabs defaultValue="overview" className="space-y-4">
-            <TabsList>
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="analytics" disabled>
-                Analytics
-              </TabsTrigger>
-              <TabsTrigger value="reports" disabled>
-                Reports
-              </TabsTrigger>
-              <TabsTrigger value="notifications" disabled>
-                Notifications
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="overview" className="space-y-4">
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
@@ -205,8 +184,6 @@ export default function DashboardPage() {
                   </CardContent>
                 </Card>
               </div>
-            </TabsContent>
-          </Tabs>
         </div>
       </div>
     </>

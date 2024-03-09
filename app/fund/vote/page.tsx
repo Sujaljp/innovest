@@ -36,6 +36,7 @@ export default function Home() {
         
         <div className="grid grid-cols-2 gap-4 ">  
           <div className='h-96 p-10 bg-gradient-to-tl from-secondary to-black rounded-lg  hover:from-10%'>
+              USer
               
           </div>
           <div className=' h-fit p-10 bg-gradient-to-tl from-secondary to-black rounded-lg  hover:from-10%'>

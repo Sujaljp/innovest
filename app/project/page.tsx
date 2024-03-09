@@ -139,6 +139,8 @@ export default function Home() {
       
       try {
         const response = await axios.post("//localhost:5000/predict", values);
+        const response1 = await axios.post("//localhost:5000/probabiity", values);
+        console.log(response1.data)
         return response.data
       } catch (error) {
         console.error('Error:', error);
