@@ -12,6 +12,7 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
+  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
 
@@ -25,7 +26,9 @@ const Unstake = () => {
 
   const contractAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"
   const contractABI = abi.abi
-  const stakedAmount = 3000000;
+  const stakedAmount = 300;
+  const penalty = 50;
+  const lockinPeriodLeft = 44;
 
   //test
   const withdraw = async () => {
@@ -97,14 +100,34 @@ const Unstake = () => {
 
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
-                {/* <DialogTitle>Edit profile</DialogTitle> */}
+                <DialogTitle>Confirm to unstake</DialogTitle>
                 <DialogDescription>
-                  Confirm to unstake your eth
+                  Your are unstaking before the lockin period, you are liable for penalty!
                 </DialogDescription>
+
               </DialogHeader>
               <div className="grid gap-4 py-4">
-                <div className="flex justify-center">
-                  TOTAL AMOUNT STAKED : {stakedAmount} ETH
+                <div className='text-red-500 text-sm'>
+                  locking period: {lockinPeriodLeft} days left
+                </div>
+                <div className="flex justify-between text-xs">
+                  <p>
+                    TOTAL AMOUNT STAKED :
+                  </p>
+                  {stakedAmount} ETH
+                </div>
+                <div className="flex justify-between text-xs">
+                  <p>
+                    TOTAL PENALTY :
+                  </p>
+                  {penalty} ETH
+                </div>
+                <div className="flex justify-between text-xs">
+                  <p>
+                    TOTAL UNSTAKABLE AMOUNT:
+
+                  </p>
+                  {stakedAmount - penalty} ETH
                 </div>
 
               </div>
