@@ -62,9 +62,14 @@ export default function Home() {
     );
   }
 
+  const dummyCards = Array.from({ length: 4 }).map((_, index) => (
+    <EgComponent title={`Startup ${index + 1}`} key={index} />
+  ));
+
   const allProjects = proj.map((val,index)=>{
     return <EgComponent title={val[1]} key={index}/>
   })
+  
 
 
   const list = async () => {
@@ -97,8 +102,9 @@ export default function Home() {
 
   
   return (
-    <div>
-      {/* <div className="absolute blur-sm h-screen w-screen bg-cover bg-[url('../public/buildings.jpg')]"></div> */}
+    
+    
+
       <div className="relative px-16 h-screen pb-10 bg-gradient-to-tl from-secondary to-black" >
         <Header className='h-32'/>
           <div className="px-10">
@@ -109,11 +115,12 @@ export default function Home() {
               </div>
             </div> 
             <div className="grid gap-4 grid-cols-4">
-              {allProjects}
+              {/* {{if(proj.length>0){allProjects}else{dummyCards}}} */}
+              {allProjects.length>0?allProjects:dummyCards}
             </div>
           </div>
     </div>
-    </div>
+    
   )
 }
 
