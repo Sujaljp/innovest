@@ -127,10 +127,12 @@ export default function Home() {
                             <div className="text-2xl flex gap-3 items-center mt-2 mb-6">
                                 <p className='mr-auto'>{formData.entrprenuer_background || 'Dummy Background'}</p>
                             </div>
-                            <div className="flex justify-between items-center mt-6 text-gray-500 text-sm"></div>
-                            <p className=''>Total Outlet</p>
+                            <div className="flex justify-between items-center mt-6 text-gray-500 text-sm">
 
-                            <div className="text-2xl flex gap-3 items-center mt-2 mb-6">
+                                <p className=''>Total Outlet</p>
+                            </div>
+
+                            <div className="text-2xl flex gap-3 items-center mt-2 mb-6 ">
                                 <p className='mr-auto'>{formData.total_outlet || 'Dummy Total Outlet'}</p>
                             </div>
                             <div className="flex justify-between items-center mt-6 text-gray-500 text-sm">
